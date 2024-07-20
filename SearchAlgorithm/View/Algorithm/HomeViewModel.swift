@@ -42,6 +42,7 @@ extension HomeViewModel {
             fillSinglePath(
                 for: path
             )
+            verifyPath(for: path)
             
         case .dfs: let path = depthFirst(
             graph: graph,
@@ -222,6 +223,12 @@ extension HomeViewModel {
         startTimer()
     }
     
+    
+    func verifyPath(for path: SolutionPath) {
+        if(path.hasPath) {
+            
+        }
+    }
     
     func stopTimer() {
         algorithm.timer?.invalidate()

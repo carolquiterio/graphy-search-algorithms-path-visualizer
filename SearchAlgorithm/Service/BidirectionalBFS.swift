@@ -40,15 +40,15 @@ func bidirectionaBFS(
         }
         
         if let valores = graph[currentEnd] {
-            if (
-                visitedStart.array as! [String]
-            ).contains(where: {
+            if let matchingStartItem = (
+                visitedStart.array as? [String]
+            )?.first(where: {
                 item in valores.contains(
                     item
                 )
             }) {
                 
-                var pathNode = goal
+                var pathNode = matchingStartItem
                 while let parent = parentsStart[pathNode] {
                     finalStartPath.insert(
                         pathNode,
@@ -61,7 +61,7 @@ func bidirectionaBFS(
                     at: 0
                 )
                 
-                var pathNodeEnd = source
+                var pathNodeEnd = currentEnd
                 while let parentEnd = parentsEnd[pathNodeEnd] {
                     finalEndPath.insert(
                         pathNodeEnd,
@@ -98,15 +98,15 @@ func bidirectionaBFS(
         }
         
         if let valores = graph[currentStart] {
-            if (
-                visitedEnd.array as! [String]
-            ).contains(where: {
+            if let matchingStartItem = (
+                visitedEnd.array as? [String]
+            )?.first(where: {
                 item in valores.contains(
                     item
                 )
             }) {
                 
-                var pathNode = goal
+                var pathNode = matchingStartItem
                 while let parent = parentsStart[pathNode] {
                     finalStartPath.insert(
                         pathNode,
@@ -119,7 +119,7 @@ func bidirectionaBFS(
                     at: 0
                 )
                 
-                var pathNodeEnd = source
+                var pathNodeEnd = currentEnd
                 while let parentEnd = parentsEnd[pathNodeEnd] {
                     finalEndPath.insert(
                         pathNodeEnd,
@@ -209,12 +209,8 @@ func bidirectionaBFS(
         hasPath: false, 
         startVisitedList: visitedStart.array as! [String],
         endVisitedList: visitedEnd.array as! [String],
-        startFinalPath: (
-            visitedStart.array as! [String]
-        ).reversed(),
-        endFinalPath: (
-            visitedEnd.array as! [String]
-        ).reversed()
+        startFinalPath: [],
+        endFinalPath: []
     )
 }
 

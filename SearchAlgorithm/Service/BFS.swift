@@ -79,12 +79,16 @@ func breadthFirst(
     return SinglePathSolution(
         hasPath: false,
         visitedList: visited.array as! [String],
-        finalPath: finalPath.array as! [String]
+        finalPath: []
     )
 }
 
 
 protocol SolutionPath {
+    var hasPath: Bool {
+        get
+    }
+    
     func nodes(
         for timeStamp: Int
     ) -> [String]

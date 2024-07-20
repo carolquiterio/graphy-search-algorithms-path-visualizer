@@ -66,7 +66,7 @@ func bidirectionaDFS(graph: [String: [String]], source: String, goal: String) ->
         hasPath: false,
         startVisitedList: visitedStart.array as! [String],
         endVisitedList: visitedEnd.array as! [String],
-        startFinalPath: (visitedStart.array as! [String]).reversed(),
-        endFinalPath: (visitedEnd.array as! [String]).reversed()
+        startFinalPath: [],
+        endFinalPath: []
     )
 }

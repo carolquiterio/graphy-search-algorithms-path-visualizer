@@ -3,7 +3,8 @@ import UniformTypeIdentifiers
 
 struct GridView: View {
     
-    @State private var showAlert = false
+    @State private var showSelectionAlert = false
+    @State private var showNoPathAlert = false
     @State private var pulsingCell: String?
     @State private var draggedItem: String?
     
@@ -35,10 +36,17 @@ struct GridView: View {
                 }
             }
         }
-        .alert(isPresented: $showAlert) {
+        .alert(isPresented: $showSelectionAlert) {
             Alert(
                 title: Text("O nó fonte não pode ser igual ao nó alvo"),
                 message: Text("Escolha outro nó"),
+                dismissButton: .default(Text("OK"))
+            )
+        }
+        .alert(isPresented: $showNoPathAlert) {
+            Alert(
+                title: Text("Não foi possível encontrar um caminho entre os nós neste grafo"),
+                message: Text("Remova o obstáculo entre os nós"),
                 dismissButton: .default(Text("OK"))
             )
         }
@@ -60,7 +68,7 @@ struct GridView: View {
     func handleTap(on current: String) {
         if isSourceNodeSelected() {
             if isGoalNode(current) {
-                showAlert = true
+                showSelectionAlert = true
             } else {
                 viewModel.algorithm.sourceNode = current
                 vibrate()
@@ -68,7 +76,7 @@ struct GridView: View {
             }
         } else if isGoalNodeSelected() {
             if isSourceNode(current) {
-                showAlert = true
+                showSelectionAlert = true
             } else {
                 vibrate()
                 pulse(cell: current)
@@ -99,7 +107,7 @@ struct GridView: View {
             if let draggedItem = item as? String {
                 if self.isGoalNode(draggedItem) {
                     if self.isSourceNode(target) {
-                        self.showAlert = true
+                        self.showSelectionAlert = true
                     } else {
                         self.viewModel.algorithm.goalNode = target
                         self.vibrate()
@@ -107,7 +115,7 @@ struct GridView: View {
                     }
                 } else if self.isSourceNode(draggedItem) {
                     if self.isGoalNode(target) {
-                        self.showAlert = true
+                        self.showSelectionAlert = true
                     } else {
                         self.viewModel.algorithm.sourceNode = target
                         self.vibrate()
