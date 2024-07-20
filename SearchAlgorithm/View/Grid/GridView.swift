@@ -12,6 +12,7 @@ struct GridView: View {
     let nodeSelection: NodeSelection
     
     var body: some View {
+        @Bindable var algorithmBinding = viewModel.algorithm
         VStack {
             ForEach(1...viewModel.getRowSize, id: \.self) { i in
                 HStack(spacing: 0) {
@@ -43,7 +44,7 @@ struct GridView: View {
                 dismissButton: .default(Text("OK"))
             )
         }
-        .alert(isPresented: $showNoPathAlert) {
+        .alert(isPresented: $algorithmBinding.shouldShowAlert) {
             Alert(
                 title: Text("Não foi possível encontrar um caminho entre os nós neste grafo"),
                 message: Text("Remova o obstáculo entre os nós"),

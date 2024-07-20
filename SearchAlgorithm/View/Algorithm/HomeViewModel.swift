@@ -52,6 +52,7 @@ extension HomeViewModel {
             fillSinglePath(
                 for: path
             )
+            verifyPath(for: path)
         case .bidirectionalBfs: let path = bidirectionaBFS(
             graph: graph,
             source: algorithm.sourceNode,
@@ -60,6 +61,7 @@ extension HomeViewModel {
             fillDoublePath(
                 for: path
             )
+            verifyPath(for: path)
         case .bidirectionalDfs: let path = bidirectionaDFS(
             graph: graph,
             source: algorithm.sourceNode,
@@ -68,6 +70,7 @@ extension HomeViewModel {
             fillDoublePath(
                 for: path
             ) 
+            verifyPath(for: path)
             //        case .aStar:
             //            return []
             //        case .dkjstra:
@@ -225,8 +228,8 @@ extension HomeViewModel {
     
     
     func verifyPath(for path: SolutionPath) {
-        if(path.hasPath) {
-            
+        if(!path.hasPath) {
+            algorithm.shouldShowAlert = true
         }
     }
     

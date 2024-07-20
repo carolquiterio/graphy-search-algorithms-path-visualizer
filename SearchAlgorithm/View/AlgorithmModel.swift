@@ -14,6 +14,7 @@ class AlgorithmModel {
     var timer: Timer? = nil
     var speed: Double = 0.1
     var hasPath: Bool = false
+    var shouldShowAlert: Bool = false
 }
 
 @Observable
