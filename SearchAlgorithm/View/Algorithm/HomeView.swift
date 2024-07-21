@@ -65,7 +65,6 @@ struct HomeView: View {
                     .horizontal,
                     12
                 )
-                QuestionButton()
             }
         )
         //  .background(colorScheme == .light ? .secondary : .tertiary)
