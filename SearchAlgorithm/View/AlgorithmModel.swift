@@ -29,7 +29,7 @@ enum AlgorithmType: String, CaseIterable, Identifiable {
     case bfs = "BFS"
     case bidirectionalBfs = "BFS Bidirecional"
     case bidirectionalDfs = "DFS Bidirecional"
-//    case aStar = "A*"
-//    case dkjstra = "Djkstra"
+    //case aStar = "A*"
+    //case dijkstra = "Dijkstra"
     case none = "Nenhum"
 }

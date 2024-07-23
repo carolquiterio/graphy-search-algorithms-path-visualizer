@@ -71,10 +71,27 @@ extension HomeViewModel {
                 for: path
             ) 
             verifyPath(for: path)
-            //        case .aStar:
-            //            return []
-            //        case .dkjstra:
-            //            return []
+       /* case .aStar:
+            let path = aStar(
+                graph: graph,
+                source: algorithm.sourceNode,
+                goal: algorithm.goalNode
+            )
+            fillSinglePath(
+                for: path
+            )
+            verifyPath(for: path)
+        case .dijkstra:
+            let path = dijkstra(
+                graph: graph,
+                source: algorithm.sourceNode,
+                goal: algorithm.goalNode
+            )
+            fillSinglePath(
+                for: path
+            )
+            verifyPath(for: path)
+            */
             case .none: break    }
     }
     
@@ -228,6 +245,12 @@ extension HomeViewModel {
     
     
     func verifyPath(for path: SolutionPath) {
+        if(!path.hasPath) {
+            algorithm.shouldShowAlert = true
+        }
+    }
+    
+    func verifyPath(for path: DoublePathSolution) {
         if(!path.hasPath) {
             algorithm.shouldShowAlert = true
         }

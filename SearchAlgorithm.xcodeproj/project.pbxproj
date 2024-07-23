@@ -26,6 +26,8 @@
 		A74068B82C2D8EE2001358EA /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74068B72C2D8EE2001358EA /* OnboardingView.swift */; };
 		A74068BA2C2D9740001358EA /* AboutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74068B92C2D9740001358EA /* AboutButton.swift */; };
 		A74068BC2C2DA994001358EA /* QuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74068BB2C2DA994001358EA /* QuestionButton.swift */; };
+		A7CA0D642C4C7F000027E2D8 /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CA0D632C4C7F000027E2D8 /* Dijkstra.swift */; };
+		A7CA0D662C4C80C80027E2D8 /* AStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CA0D652C4C80C80027E2D8 /* AStar.swift */; };
 		A7D3E8212C3578EB000D50C4 /* CustomToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3E8202C3578EB000D50C4 /* CustomToolBar.swift */; };
 		F2ECD1462C2D8479009F8C3C /* BidirectionalBFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ECD1452C2D8479009F8C3C /* BidirectionalBFS.swift */; };
 		F2ECD1482C2EFE44009F8C3C /* BidirectionalDFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ECD1472C2EFE44009F8C3C /* BidirectionalDFS.swift */; };
@@ -52,6 +54,8 @@
 		A74068B72C2D8EE2001358EA /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A74068B92C2D9740001358EA /* AboutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutButton.swift; sourceTree = "<group>"; };
 		A74068BB2C2DA994001358EA /* QuestionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionButton.swift; sourceTree = "<group>"; };
+		A7CA0D632C4C7F000027E2D8 /* Dijkstra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
+		A7CA0D652C4C80C80027E2D8 /* AStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AStar.swift; sourceTree = "<group>"; };
 		A7D3E8202C3578EB000D50C4 /* CustomToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolBar.swift; sourceTree = "<group>"; };
 		F2ECD1452C2D8479009F8C3C /* BidirectionalBFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidirectionalBFS.swift; sourceTree = "<group>"; };
 		F2ECD1472C2EFE44009F8C3C /* BidirectionalDFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidirectionalDFS.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				A740689D2C2AFCD9001358EA /* DFS.swift */,
 				F2ECD1472C2EFE44009F8C3C /* BidirectionalDFS.swift */,
 				A74068982C29BCE4001358EA /* GenerateGraph.swift */,
+				A7CA0D632C4C7F000027E2D8 /* Dijkstra.swift */,
+				A7CA0D652C4C80C80027E2D8 /* AStar.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 				A74068BA2C2D9740001358EA /* AboutButton.swift in Sources */,
 				A74068B82C2D8EE2001358EA /* OnboardingView.swift in Sources */,
 				A74068B32C2C4CDD001358EA /* AlgorithmProtocol.swift in Sources */,
+				A7CA0D662C4C80C80027E2D8 /* AStar.swift in Sources */,
 				A74068A82C2C3EF9001358EA /* HomeViewModel.swift in Sources */,
 				A740688B2C29B4C2001358EA /* SearchAlgorithmApp.swift in Sources */,
 				A740689C2C29BD1B001358EA /* BFS.swift in Sources */,
@@ -254,6 +261,7 @@
 				A74068A32C2C3B04001358EA /* SelectionView.swift in Sources */,
 				A740689E2C2AFCD9001358EA /* DFS.swift in Sources */,
 				A74068AD2C2C499C001358EA /* ViewFactory.swift in Sources */,
+				A7CA0D642C4C7F000027E2D8 /* Dijkstra.swift in Sources */,
 				A74068AB2C2C4950001358EA /* Dependencies.swift in Sources */,
 				A7D3E8212C3578EB000D50C4 /* CustomToolBar.swift in Sources */,
 				A74068A62C2C3E03001358EA /* AlgorithmModel.swift in Sources */,
